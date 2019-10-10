@@ -1,0 +1,14 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="Subtitle" Content="<%= theme.subtitle %>">
+    <meta name="Description" Content="<%= theme.description %>">
+    <meta name="Keywords" Content="<%= theme.keywords %>">
+    <meta name="Author" Content="<%= theme.author %>">
+
+    <title><%= theme.title %></title>
+    <link rel="icon" type="image/png" href="<%- url_for(theme.icon.head) %>" sizes="32x32">
+    <%- css('css/style.css') %>
+</head>

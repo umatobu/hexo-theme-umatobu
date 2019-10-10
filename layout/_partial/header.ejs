@@ -1,0 +1,10 @@
+<header>
+  <a href="/" class="logo-link"><img src="<%- url_for(theme.icon.header_logo) %>" alt="icon"></a>
+  <ul class="nav nav-list">
+    <% for (name in theme.menu) { %>
+      <li class="nav-list-item">
+        <a href="<%- url_for(theme.menu[name]) %>" target="_self" class="nav-list-link active"><%= name %></a>
+      </li>
+    <% } %>
+  </ul>
+</header>
