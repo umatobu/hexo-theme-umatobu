@@ -6,8 +6,6 @@ subtitle: sharing, open source, interesting
 description: record the history of the academic qualifications, the interesting things and the sentiments of life
 keywords: c++,Qt,opengl,opencv
 author: umatobu
-# language: zh-CN
-# timezone: Asia/Shanghai
 
 # URL
 url:
@@ -23,14 +21,9 @@ menu:
   HOME: /
   ARCHIVES: /archives
   CATEGORY: /category
-  UMATOBU: /umatobu
+  ME: /me
 
 # icon
 icon:
   head: /icon/favicon.png
   header_logo: /icon/header_logo.png
-
-# home setting
-# per_page: Posts displayed per page. (0 = disable pagination)
-home_setting:
-  per_page: 10
