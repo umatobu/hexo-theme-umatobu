@@ -3,7 +3,7 @@
   <ul class="nav nav-list">
     <% for (name in theme.menu) { %>
       <li class="nav-list-item">
-        <a href="<%- url_for(theme.menu[name]) %>" target="_self" class="nav-list-link active"><%= name %></a>
+        <a href="<%- url_for(theme.menu[name]) %>" target="_self" class="nav-list-link <%= is_current(theme.menu[name]) ? 'active' : '' %>"><%= name %></a>
       </li>
     <% } %>
   </ul>
