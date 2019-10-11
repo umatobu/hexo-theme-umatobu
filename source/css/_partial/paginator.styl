@@ -1,0 +1,41 @@
+nav.page-nav {
+    display: block;
+    text-align: center;
+
+    a.extend {
+        display: inline-block;
+        margin: 0 4px;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border-bottom: 4px solid #6AA593;
+        font-size: 14px;
+        color: #fff;
+        background-color: #8CC7B5;
+
+        &:hover {
+            background-color: #7BB6A4;
+        }
+    }
+
+    a.prev {
+        margin-right: 1em;
+    }
+
+    a.next {
+        margin-left: 1em;
+    }
+
+    a.page-number,
+    span.current {
+        display: inline-block;
+        margin: 0 2px;
+        padding: 0 2px;
+        font-size: 17px;
+        color: #2A1633;
+    }
+
+    span.current {
+        color: #8CC7B5;
+        font-weight: bold;
+    }
+}

@@ -1,1 +1,13 @@
-<h1>Hello Word</h1>
+<ul class="home post-list">
+<% page.posts.each(function (post) { %>
+  <li class="post-list-item">
+    <article class="post-block">
+        <h2 class="post-title"><a href="<%- url_for(post.path) %>" class="post-title-link"><%= post.title %></a></h2>
+        <div class="post-info"><%- date(post.date, "YYYY-MM-DD") %></div>
+        <div><p><%- post.excerpt %></p></div>
+        <a href="<%- url_for(post.path) %>" class="read-more">...more</a>
+    </article>
+  </li>
+<% }) %>
+</section>
+<%- partial('_partial/paginator') %>
