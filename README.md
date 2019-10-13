@@ -6,6 +6,7 @@
 <h2 align="center">UMATOBU - Hexo极简主题</h2>
 
 ![hexo-theme-umatobu](./show/show1.png) 
+![hexo-theme-umatobu](./show/show2.png) 
 
 ## 安装
 
@@ -46,3 +47,5 @@ MIT
 ## 说明
 
 本主题从[hexo-theme-apollo]("https://github.com/pinggod/hexo-theme-apollo")的基础上改写，模版引擎改为hexo默认安装的引擎，另外首页加了导航，归档页面可按照日期或者分类归档。
+
+aboutme页面暂时还未完成，等待后续更新。
