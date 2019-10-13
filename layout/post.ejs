@@ -1,9 +1,20 @@
-<div class="post">
-  <article class="post-block">
-    <h1 class="post-title"><%= page.title %></h1>
-    <div class="post-info"><%- date(page.date, "YYYY-MM-DD") %></div>
-    <div class="post-content">
-      <%- page.content %>
-    </div>
-  </article>
-</div>
+<% var relative_path = null; %>
+<% for (name in theme.menu) { %>
+  <% var relative_path_temp = '/' + path.split("/index.html").join(""); %>
+  <% if (theme.menu[name] == relative_path_temp) { %>
+    <% relative_path = relative_path_temp; %>
+  <% } %>
+<% } %>
+<% if (relative_path != null) { %>
+  <%- partial(relative_path) %>
+<% } else { %>
+  <div class="post">
+    <article class="post-block">
+      <h1 class="post-title"><%= page.title %></h1>
+      <div class="post-info"><%- date(page.date, "YYYY-MM-DD") %></div>
+      <div class="post-content">
+        <%- page.content %>
+      </div>
+    </article>
+  </div>
+<% } %>
