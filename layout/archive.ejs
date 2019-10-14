@@ -48,7 +48,7 @@
             <% var category_keys_temp = Object.keys(category_obj[category_keys[i]]); %>
             <% for(var j in category_keys_temp) { %>
                 <div class="subtitle-item">
-                    <p><%= category_keys_temp[j] %></p>
+                    <label><%= category_keys_temp[j] %></label>
                 </div>
             <% } %>
             <% page.posts.each(function (post) { %>
