@@ -1,15 +1,32 @@
 <div class="tab-div-menu">
     <ul>
-        <li id="tab1-li" class="tab-div-menu-li category" onclick="my_tab_li_click(1)" style="background-color: #6AA593">
-            CATEGORY
-        </li>
-        <li id="tab2-li" class="tab-div-menu-li datetime" onclick="my_tab_li_click(2)">
+        <li id="tab1-li" class="tab-div-menu-li datetime" onclick="my_tab_li_click(1)" style="background-color: #6AA593">
             DATETIME
+        </li>
+        <li id="tab2-li" class="tab-div-menu-li category" onclick="my_tab_li_click(2)">
+            CATEGORY
         </li>
     </ul>
 </div>
-  
+
 <div id="tab1-div" class="archive" style="display: block">
+    <ul class="post-archive">
+        <% var last; %>  
+        <% page.posts.each(function (post) { %>
+            <% var year = post.date.year(); %>
+            <% if (last != year){ %>
+                <% last = year; %>
+                <h2 class="archive-main-category"><%= year %></h2>
+            <% } %>
+                <div class="post-item">
+                    <div class="post-info"><%= date(post.date, "YYYY-MM-DD") %></div>
+                    <a href="<%- url_for(post.path) %>" class="post-title-link" target="_blank"><%= post.title %></a>
+                </div>
+        <% }) %>
+    </ul>
+</div>
+  
+<div id="tab2-div" class="archive">
     <ul class="post-archive">
         <% var category_obj = new Object(); %> 
         <% page.posts.each(function (post) { %>
@@ -55,22 +72,5 @@
             <div class="post-item">
             </div>
         <% } %>
-    </ul>
-</div>
-
-<div id="tab2-div" class="archive">
-    <ul class="post-archive">
-        <% var last; %>  
-        <% page.posts.each(function (post) { %>
-            <% var year = post.date.year(); %>
-            <% if (last != year){ %>
-                <% last = year; %>
-                <h2 class="archive-main-category"><%= year %></h2>
-            <% } %>
-                <div class="post-item">
-                    <div class="post-info"><%= date(post.date, "YYYY-MM-DD") %></div>
-                    <a href="<%- url_for(post.path) %>" class="post-title-link" target="_blank"><%= post.title %></a>
-                </div>
-        <% }) %>
     </ul>
 </div>
