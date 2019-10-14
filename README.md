@@ -40,12 +40,19 @@ cd themes/umatobu
 git pull
 ```
 
-## License
+## 格式示例
 
-MIT
+```
+title: Hexo环境搭建
+date: 2017-04-15 18:02:14
+categories:
+- [main_category, minor_category]
+```
 
 ## 说明
 
 本主题从[hexo-theme-apollo]("https://github.com/pinggod/hexo-theme-apollo")的基础上改写，模版引擎改为hexo默认安装的引擎，另外首页加了导航，归档页面可按照日期或者分类归档。
+
+注意：分类归档只支持两级分类。
 
 aboutme页面暂时还未完成，等待后续更新。
