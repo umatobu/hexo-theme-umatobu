@@ -7,6 +7,7 @@
 
 ![hexo-theme-umatobu](./show/show1.png) 
 ![hexo-theme-umatobu](./show/show2.png) 
+![hexo-theme-umatobu](./show/show3.png) 
 
 ## 安装
 
@@ -56,3 +57,9 @@ categories:
 注意：分类归档只支持两级分类。
 
 aboutme页面暂时还未完成，等待后续更新。
+
+##分类归档
+
+如果想达到一下效果，可以看我的博客[Hexo自定义辅助函数和插件编写](https://umatobu.github.io/2018/06/19/Hexo%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0%E5%92%8C%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99/)
+
+![hexo-theme-umatobu](./show/show4.png)
