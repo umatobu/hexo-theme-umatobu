@@ -1,15 +1,19 @@
 <div class="tab-div-menu">
-    <ul>
-        <li id="tab1-li" class="tab-div-menu-li datetime" onclick="my_tab_li_click(1)" style="background-color: #6AA593">
-            DATETIME
-        </li>
-        <li id="tab2-li" class="tab-div-menu-li category" onclick="my_tab_li_click(2)">
+    <ul class="category-ul">
+        <li id="tab1-li" class="tab-div-menu-li category" onclick="my_tab_li_click(1)" style="background-color: #6AA593">
             CATEGORY
+        </li>
+        <li id="tab2-li" class="tab-div-menu-li datetime" onclick="my_tab_li_click(2)">
+            DATETIME
         </li>
     </ul>
 </div>
-
+  
 <div id="tab1-div" class="archive" style="display: block">
+    <%- list_categories(site.categories) %>
+</div>
+
+<div id="tab2-div" class="archive">
     <ul class="post-archive">
         <% var last; %>  
         <% page.posts.each(function (post) { %>
@@ -23,54 +27,5 @@
                     <a href="<%- url_for(post.path) %>" class="post-title-link" target="_blank"><%= post.title %></a>
                 </div>
         <% }) %>
-    </ul>
-</div>
-  
-<div id="tab2-div" class="archive">
-    <ul class="post-archive">
-        <% var category_obj = new Object(); %> 
-        <% page.posts.each(function (post) { %>
-            <% var one_post_category_obj = new Object(); %> 
-            <% for(var i = (post.categories.length-1); i >= 0; i--) { %>
-                <% if( i == 0) { %>
-                    <% category_obj[post.categories['data'][i]['name']] = one_post_category_obj; %>
-                <% } else { %>
-                    <% var temp_obj = one_post_category_obj; %>
-                    <% temp_obj[post.categories['data'][i]['name']] = temp_obj; %>
-                    <% one_post_category_obj = temp_obj;  %>
-                <% } %>
-            <% } %>
-        <% }) %>
-
-        <% var category_keys = Object.keys(category_obj); %>
-        <% for(var i in category_keys) { %>
-            <h2 class="archive-main-category"><%= category_keys[i] %></h2>
-            <% var category_keys_temp = Object.keys(category_obj[category_keys[i]]); %>
-            <% for(var j in category_keys_temp) { %>
-                <div class="subtitle-item">
-                    <label><%= category_keys_temp[j] %></label>
-                </div>
-            <% } %>
-            <% page.posts.each(function (post) { %>
-                <% if(post.categories.length == 0) { %>
-                <% } else if(post.categories.length == 1) { %>
-                    <% if(post.categories['data'][0]['name'] == category_keys[i]) { %>
-                        <div class="post-item">
-                            <div class="post-info"><%= date(post.date, "YYYY-MM-DD") %></div>
-                            <a href="<%- url_for(post.path) %>" class="post-title-link" target="_blank"><%= post.title %></a>
-                        </div>
-                    <% } %>
-                <% } else { %>
-                    <% if(post.categories['data'][0]['name'] == category_keys[i] && post.categories['data'][1]['name'] == Object.keys(category_obj[category_keys[i]])[0]) { %>
-                        <div class="post-item">
-                            <div class="post-info"><%= date(post.date, "YYYY-MM-DD") %></div>
-                            <a href="<%- url_for(post.path) %>" class="post-title-link" target="_blank"><%= post.title %></a>
-                        </div>
-                    <% } %>
-                <% } %>
-            <% }) %>
-            <div class="post-item">
-            </div>
-        <% } %>
     </ul>
 </div>
