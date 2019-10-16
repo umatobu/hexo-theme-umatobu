@@ -7,5 +7,12 @@
       <main class="container"><%- body %></main>
       <%- partial('_partial/footer') %>
     </div>
+    <script>
+      $(function () {
+        var $text = $('.emojstext');
+        var html = $text.html().trim().replace(/\n/g, '<br/>');
+        $text.html(jEmoji.unifiedToHTML(html));
+      });
+    </script>
   </body>
 </html>
