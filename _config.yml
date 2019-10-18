@@ -12,10 +12,6 @@ url:
   blog_url: https://github.com/umatobu
   theme_url: https://github.com/umatobu/hexo-theme-umatobu
 
-# contact
-contact:
-  email: umatobu@163.com
-
 # menu
 menu:
   HOME: /
@@ -26,3 +22,14 @@ menu:
 icon:
   head: /icon/favicon.png
   header_logo: /icon/header_logo.png
+
+# me
+me:
+  photo: /photo/head.png
+  name: umatobu
+  telephone: +86-1873713xxxx
+  email: umatobu@163.com
+  address: GuangWu Road, Xingyang County, Zhengzhou City
+  university: Zhengzhou University of Light Industry
+  major: computer science and Technology
+  github: https://github.com/umatobu

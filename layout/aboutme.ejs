@@ -1,0 +1,12 @@
+<div class="aboutme">
+    <img src="<%- url_for(theme.me.photo) %>" alt="icon"></img>
+    <div class="my-info-div">
+        <p class="my-info-p">NAME:  <label class="my-label"><%= theme.me.name %></label></p>
+        <p class="my-info-p">TELEPHONE:  <label class="my-label"><%= theme.me.telephone %></label></p>
+        <p class="my-info-p">EMAIL:  <a href="mailto:<%- theme.me.email %>" title="<%- theme.me.email %>"><%- theme.me.email %></a></p>
+        <p class="my-info-p">ADDRESS:  <label class="my-label"><%= theme.me.address %></label></p>
+        <p class="my-info-p">UNIVERSITY:  <label class="my-label"><%= theme.me.university %></label></p>
+        <p class="my-info-p">MAJOR:  <label class="my-label"><%= theme.me.major %></label></p>
+        <p class="my-info-p">GITHUB:  <a href="<%- url_for(theme.me.github) %>" target="_blank"><%- theme.me.github %></a></p>
+    </div>
+</div>
